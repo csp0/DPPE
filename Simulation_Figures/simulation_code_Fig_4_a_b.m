@@ -133,21 +133,3 @@ legend('Pure L1C (Theory)', 'Enhanced Chimera (Theory)', ...
 set(gca, 'FontSize', 11);
 fprintf('Visualization Completed.\n');
 
-
-
-
-
-
-
-
-%[appendix]{"version":"1.0"}
-%---
-%[metadata:view]
-%   data: {"layout":"onright","rightPanelPercent":48.2}
-%---
-%[output:4305c6a9]
-%   data: {"dataType":"text","outputData":{"text":"Integrated Acquisition Performance for Gigure 6 and 7 \n","truncated":false}}
-%---
-%[output:3dcc9ab2]
-%   data: {"dataType":"error","outputData":{"errorType":"runtime","text":"hexToBits is not found in the current folder or on the MATLAB path, but exists in:\n    C:\\Simulink_Projects\\(2) Chimera Project\n\n<a href = \"matlab:internal.matlab.desktop.commandwindow.executeCommandForUser('cd ''C:\\Simulink_Projects\\(2) Chimera Project''')\">Change the MATLAB current folder<\/a> or <a href = \"matlab:internal.matlab.desktop.commandwindow.executeCommandForUser('addpath ''C:\\Simulink_Projects\\(2) Chimera Project''')\">add its folder to the MATLAB path<\/a>."}}
-%---
