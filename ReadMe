@@ -1,16 +1,21 @@
-# Enhanced Chimera (DLCV) GPS L1C Baseband Simulator
+# GPS L1C Baseband Simulator (with DPPE)
 
 ## Overview
-This repository contains a comprehensive, MATLAB-based end-to-end baseband simulator for the Enhanced Chimera protocol. It strictly evaluates the physical-layer robustness and cryptographic integrity of the GPS L1C (CNAV-2) signal utilizing Deterministic Location, Cryptographic Value (DLCV) puncturing.
-
-Unlike conventional implementations, this simulator uniquely integrates rigorous cryptographic authentication directly into the physical layer signal processing chain. The simulation demonstrates that a 900-bit cryptographic payload can be seamlessly embedded, transmitted over a noisy channel, naturally tracked by a Phase-Locked Loop (PLL), and authenticated via ECDSA-512 and TESLA hash chains without compromising the backward compatibility of the Standard Chimera protocol.
+This repository contains a comprehensive, MATLAB-based end-to-end baseband simulator for the DPPE. 
+It strictly evaluates the physical-layer robustness and cryptographic integrity of the GPS L1C (CNAV-2) signal 
+utilizing Deterministic Location, Cryptographic Value puncturing. Unlike conventional implementations, 
+this simulator uniquely integrates rigorous cryptographic authentication 
+directly into the physical layer signal processing chain. The simulation demonstrates that a 900-bit cryptographic 
+payload can be seamlessly embedded, transmitted over a noisy channel, naturally tracked by a Phase-Locked Loop 
+(PLL), and authenticated via 512-bit ECDSA and TESLA hash chains.
 
 ## Key Features
 - Signal Generation: GPS L1C (CNAV-2) data (L1Cd) and pilot (L1Cp) components with deterministic puncturing (First 580 non-TMBOC chips).
 - Realistic Channel Modeling: Includes AWGN (40 dB-Hz C/N0), code delay, and a residual Doppler error (5 Hz) to simulate post-FLL handover scenarios.
-- Signal Tracking: Employs a realistic Phase-Locked Loop (PLL) with a 200-symbol transient warm-  up period.
+- Signal Tracking: Employs a realistic Phase-Locked Loop (PLL) with a 200-symbol transient warm-up period.
 - FEC Demodulation:** Full recovery of CNAV-2 subframes via BCH (Subframe 1) and LDPC (Subframes 2 & 3) decoding.
-- End-to-End Cryptography: Generates and verifies an ECDSA-512 (secp256r1) Root Signature, a TESLA Hash Chain (n=10), and a Message Authentication Code (MAC) bound to the raw, unencoded navigation subframes.
+- End-to-End Cryptography: Generates and verifies an 512-bit ECDSA Signature, a TESLA Hash Chain (n=10), and 
+  a Message Authentication Code (MAC) bound to the raw, unencoded navigation subframes.
 
 ## Experimental Environment (Prerequisites)
 To run this simulator successfully, the following software environment is required:
@@ -21,11 +26,11 @@ To run this simulator successfully, the following software environment is requir
 
 ## Repository Structure
 Ensure all the following files are located in the same working directory before execution:
-- `Main_Enhanced_Chimera.m` : The main execution script containing the end-to-end simulation pipeline.
-- `MATLAB Output (Main_Enhanced_Chimera).pdf` : Output result of executing 'Main_Enhanced_Chimera.m' script.
+- `Main_DPPE.m` : The main execution script containing the end-to-end simulation pipeline.
+- `MATLAB Output (Main_DPPE).pdf` : Output result of executing 'Main_DPPE.m' script.
 - `gpsNavigationConfig.m` : A lightweight, custom configuration class optimized specifically for CNAV-2 (L1C) parameters.
 - `gpsNAVDataEncode.m` : A custom encoder modified to output both the fully encoded 1800-bit frame and 
-the pure, raw navigation subframes (SF1, SF2, SF3) for backward-compatible MAC generation.
+   the pure, raw navigation subframes (SF1, SF2, SF3) for backward-compatible MAC generation.
 - `L1CLDPCParityCheckMatrices.mat` : A mandatory data file containing the sparse parity-check matrices (A1, B1, C1, E1, T1, etc.) defined in IS-GPS-800j for LDPC error correction.
 - `simulation_code_Fig(7-10).m`: scripts for drawing several figures in the manuscript.
 
