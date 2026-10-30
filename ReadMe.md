@@ -21,8 +21,8 @@ payload can be seamlessly embedded, transmitted over a noisy channel, naturally 
 To run this simulator successfully, the following software environment is required:
 - Platform: MATLAB (R2021a or later is highly recommended for optimal Java Cryptography Architecture integration and string handling).
 - Required Toolboxes:
-  Communications Toolbox** (Required for LDPC encoding/decoding, BCH processing, Viterbi decoding, CRC generation/detection, and interleaving).
-  Satellite Communications Toolbox** (Required for core GPS spreading code generation, e.g., ` gpsL1CCodes`).
+  - Communications Toolbox** (Required for LDPC encoding/decoding, BCH processing, Viterbi decoding, CRC generation/detection, and interleaving).
+  - Satellite Communications Toolbox** (Required for core GPS spreading code generation, e.g., ` gpsL1CCodes`).
 
 ## Repository Structure
 Ensure all the following files are located in the same working directory before execution:
