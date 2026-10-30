@@ -27,7 +27,7 @@ To run this simulator successfully, the following software environment is requir
 ## Repository Structure
 Ensure all the following files are located in the same working directory before execution:
 - `Main_DPPE.m` : The main execution script containing the end-to-end simulation pipeline.
-- `MATLAB Output (Main_DPPE).pdf` : Output result of executing 'Main_DPPE.m' script.
+- `Output_Main_DPPE.pdf` : Output result of executing 'Main_DPPE.m' script.
 - `gpsNavigationConfig.m` : A lightweight, custom configuration class optimized specifically for CNAV-2 (L1C) parameters.
 - `gpsNAVDataEncode.m` : A custom encoder modified to output both the fully encoded 1800-bit frame and 
    the pure, raw navigation subframes (SF1, SF2, SF3) for backward-compatible MAC generation.
