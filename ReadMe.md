@@ -10,19 +10,19 @@ payload can be seamlessly embedded, transmitted over a noisy channel, naturally 
 (PLL), and authenticated via 512-bit ECDSA and TESLA key chains.
 
 ## Key Features
-- Signal Generation: GPS L1C (CNAV-2) data (L1Cd) and pilot (L1Cp) components with deterministic puncturing (First 580 non-TMBOC chips).
+- Signal Generation: GPS L1C (CNAV-2) data (L1Cd) and pilot (L1Cp) components with deterministic puncturing (580 non-TMBOC chips).
 - Realistic Channel Modeling: Includes AWGN (40 dB-Hz C/N0), code delay, and a residual Doppler error (5 Hz) to simulate post-FLL handover scenarios.
 - Signal Tracking: Employs a realistic Phase-Locked Loop (PLL) with a 200-symbol transient warm-up period.
 - FEC Demodulation:** Full recovery of CNAV-2 subframes via BCH (Subframe 1) and LDPC (Subframes 2 & 3) decoding.
-- End-to-End Cryptography: Generates and verifies an 512-bit ECDSA Signature, a TESLA Hash Chain (n=10), and 
+- End-to-End Cryptography: Generates and verifies an 512-bit ECDSA Signature, a TESLA Key Chain (N=10), and 
   a Message Authentication Code (MAC) bound to the raw, unencoded navigation subframes.
 
 ## Experimental Environment (Prerequisites)
 To run this simulator successfully, the following software environment is required:
 - Platform: MATLAB (R2021a or later is highly recommended for optimal Java Cryptography Architecture integration and string handling).
 - Required Toolboxes:
-  - Communications Toolbox** (Required for LDPC encoding/decoding, BCH processing, Viterbi decoding, CRC generation/detection, and interleaving).
-  - Satellite Communications Toolbox** (Required for core GPS spreading code generation, e.g., ` gpsL1CCodes`).
+  - Communications Toolbox (Required for LDPC encoding/decoding, BCH processing, Viterbi decoding, CRC generation/detection, and interleaving).
+  - Satellite Communications Toolbox (Required for core GPS spreading code generation, e.g., ` gpsL1CCodes`).
 
 ## Repository Structure
 Ensure all the following files are located in the same working directory before execution:
