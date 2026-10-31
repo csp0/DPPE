@@ -30,9 +30,9 @@ Ensure all the following files are located in the same working directory before 
 - `Output_Main_DPPE.pdf` : Output result of executing 'Main_DPPE.m' script.
 - `gpsNavigationConfig.m` : A lightweight, custom configuration class optimized specifically for CNAV-2 (L1C) parameters.
 - `gpsNAVDataEncode.m` : A custom encoder modified to output both the fully encoded 1800-bit frame and 
-   the pure, raw navigation subframes (SF1, SF2, SF3) for backward-compatible MAC generation.
+   the pure, raw navigation subframes (subF1, subF2, subF3) for MAC generation.
 - `L1CLDPCParityCheckMatrices.mat` : A mandatory data file containing the sparse parity-check matrices (A1, B1, C1, E1, T1, etc.) defined in IS-GPS-800j for LDPC error correction.
-- `simulation_code_Fig(7-10).m`: scripts for drawing several figures in the manuscript.
+- `simulation_code_Fig(4-7).m`: scripts for drawing several figures in the manuscript.
 
 ## Usage & Precautions
 1. Execution Time: The simulation processes the signal chip-by-chip and symbol-by-symbol through a closed-loop PLL, followed by intensive LDPC and Viterbi decoding. Depending on your CPU specifications, the execution may take a few moments.
