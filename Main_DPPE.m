@@ -747,9 +747,3 @@ function out = format_der_integer(val)
         out = val(:);
     end
 end
-
-%[appendix]{"version":"1.0"}
-%---
-%[metadata:view]
-%   data: {"layout":"onright","rightPanelPercent":8.4}
-%---
