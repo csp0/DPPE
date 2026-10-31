@@ -7,7 +7,7 @@ utilizing Deterministic Location, Cryptographic Value puncturing. Unlike convent
 this simulator uniquely integrates rigorous cryptographic authentication 
 directly into the physical layer signal processing chain. The simulation demonstrates that a 900-bit cryptographic 
 payload can be seamlessly embedded, transmitted over a noisy channel, naturally tracked by a Phase-Locked Loop 
-(PLL), and authenticated via 512-bit ECDSA and TESLA hash chains.
+(PLL), and authenticated via 512-bit ECDSA and TESLA key chains.
 
 ## Key Features
 - Signal Generation: GPS L1C (CNAV-2) data (L1Cd) and pilot (L1Cp) components with deterministic puncturing (First 580 non-TMBOC chips).
